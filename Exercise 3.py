@@ -30,9 +30,7 @@ def run():
     else:
         print('Solo se aceptan numeros positivos')
 
-
-
-
+        
 def print_list(user_list, num_user):
 
     limited_list(user_list, 5)

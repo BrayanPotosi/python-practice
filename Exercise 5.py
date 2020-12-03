@@ -21,6 +21,7 @@ def run():
 
     random_list(8, 10, list_one)
     random_list(8, 10, list_two)
+    
     common_numbers(list_one, list_two)
 
 
