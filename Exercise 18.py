@@ -7,4 +7,34 @@
 # Every time the user makes a guess, tell them how many “cows” and “bulls” they have. Once the user guesses
 # the correct number, the game is over. Keep track of the number of guesses the user makes throughout teh game
 # and tell the user at the end.
-# 
+
+from random import randint
+
+
+def run():
+
+    check_number()
+
+
+def get_number():
+
+    number_cb = str(input('Adivina el numero de 4 digitos : '))
+
+    return number_cb
+
+
+def check_number():
+
+    random_number = randint(1000, 9999)
+    var_run = True
+    
+    print(random_number)
+
+    while var_run:
+
+        user_number = get_number()
+        print(user_number)
+
+
+if __name__ == '__main__':
+    run()
