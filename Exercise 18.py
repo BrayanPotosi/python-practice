@@ -12,12 +12,10 @@ from random import randint
 
 
 def run():
-
     check_number()
 
 
 def get_number():
-
     number_cb = str(input('Adivina el numero de 4 digitos : '))
 
     return number_cb
@@ -25,16 +23,29 @@ def get_number():
 
 def check_number():
 
-    random_number = randint(1000, 9999)
+    random_number = str(randint(1000, 9999))
     var_run = True
     
     print(random_number)
 
     while var_run:
 
-        user_number = get_number()
-        print(user_number)
+        cows = 0
+        bulls = 0
+        attemps = 0
+        user_number = str(get_number())
+        
+        for i in range(len(random_number)):
 
+            if user_number == random_number:
+                print(f'Adivinaste, numero de intentos {attemps}')
+                exit()
+            elif user_number in random_number and user_number[i] == random_number[i]:
+                cows += 1
+            elif user_number in random_number:
+                bulls += 1
+
+        print(f'Tienes {cows} vacas y {bulls} Toros')
 
 if __name__ == '__main__':
     run()
